@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Buildings Guide - Infinity Kingdom</title>
+    <meta name="description" content="Complete guide to military buildings in Infinity Kingdom. Learn about Barracks, Stable, Archery Range, Workshop and optimal upgrade priorities for training powerful armies.">
+    <meta name="keywords" content="Infinity Kingdom, military buildings, barracks, stable, archery range, workshop, troop training, building guide">
+    <link rel="canonical" href="https://infinity-kingdom-guide.com/building-military.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .guide-header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .guide-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .guide-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guide-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            border-bottom: 2px solid rgba(255, 107, 107, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            margin: 20px 0 15px 0;
+            color: #ff8e8e;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .card ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .building-card {
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .building-card h3 {
+            color: #ff6b6b;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .building-icon {
+            font-size: 2em;
+        }
+
+        .building-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .stat-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .tips-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid rgba(76, 175, 80, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .tips-box h4 {
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: rgba(255, 193, 7, 0.2);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .warning-box h4 {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        .priority-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .priority-table th,
+        .priority-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .priority-table th {
+            background: rgba(255, 107, 107, 0.2);
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .priority-high {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .priority-medium {
+            color: #ffc107;
+        }
+
+        .quick-info {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .quick-info h3 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: rgba(255, 107, 107, 0.3);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 107, 107, 0.5);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 107, 107, 0.5);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .guide-header {
+                padding: 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#military-buildings" class="back-button">← Back to Buildings</a>
+
+        <div class="guide-header">
+            <div class="guide-icon">⚔️</div>
+            <h1>Military Buildings Guide</h1>
+            <p>Train and upgrade your army with these essential military structures. Learn optimal upgrade priorities and troop training strategies.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="card">
+                    <h2>Overview of Military Buildings</h2>
+                    <p>Military buildings are the backbone of your army production. Upgrading them unlocks higher tier troops and increases training capacity.</p>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🏛️</span> Barracks</h3>
+                        <p>The Barracks is where you train infantry troops. Infantry forms the frontline of your army with high defense and HP.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Unlocks</div>
+                                <div class="stat-value">T1-T5 Infantry</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">Highest</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Resource Cost</div>
+                                <div class="stat-value">Food + Wood</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Training Speed</div>
+                                <div class="stat-value">Increases with level</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Unlock higher tier infantry (T2 at level 5, T3 at level 10, etc.)</li>
+                            <li>Increase training queue capacity</li>
+                            <li>Reduce training time</li>
+                            <li>Increase infantry attack and defense stats</li>
+                        </ul>
+
+                        <div class="tips-box">
+                            <h4>💡 Pro Tip</h4>
+                            <p>Always keep your Barracks upgrading! Higher tier infantry dramatically outperform lower tiers. Focus on reaching T4/T5 as soon as possible.</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🐴</span> Stable</h3>
+                        <p>The Stable trains cavalry units. Cavalry excels at flanking attacks and has high movement speed.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Unlocks</div>
+                                <div class="stat-value">T1-T5 Cavalry</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">High</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Resource Cost</div>
+                                <div class="stat-value">Food + Gold</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Special Trait</div>
+                                <div class="stat-value">Fast March Speed</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Unlock higher tier cavalry units</li>
+                            <li>Increase cavalry march speed</li>
+                            <li>Boost cavalry attack power</li>
+                            <li>Improve flanking damage bonus</li>
+                        </ul>
+
+                        <div class="tips-box">
+                            <h4>💡 Cavalry Strategy</h4>
+                            <p>Cavalry is excellent for hit-and-run tactics and gathering resources quickly. Use them to exploit enemy weaknesses.</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🏹</span> Archery Range</h3>
+                        <p>The Archery Range trains ranger units. Rangers deal massive ranged damage but have low defense.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Unlocks</div>
+                                <div class="stat-value">T1-T5 Rangers</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">High</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Resource Cost</div>
+                                <div class="stat-value">Wood + Stone</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Damage Type</div>
+                                <div class="stat-value">Ranged Physical</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Unlock higher tier ranger units</li>
+                            <li>Increase ranger attack range</li>
+                            <li>Boost critical hit chance</li>
+                            <li>Improve damage against infantry</li>
+                        </ul>
+
+                        <div class="warning-box">
+                            <h4>⚠️ Important</h4>
+                            <p>Rangers are fragile! Always protect them behind infantry tanks. Never send rangers alone into battle.</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🔧</span> Workshop</h3>
+                        <p>The Workshop trains siege units. Siege weapons specialize in destroying enemy buildings and walls.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Unlocks</div>
+                                <div class="stat-value">T1-T5 Siege</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">Medium</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Resource Cost</div>
+                                <div class="stat-value">Stone + Gold</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Special Ability</div>
+                                <div class="stat-value">Building Damage Bonus</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Unlock higher tier siege weapons</li>
+                            <li>Increase building destruction rate</li>
+                            <li>Improve siege unit survivability</li>
+                            <li>Reduce siege training time</li>
+                        </ul>
+
+                        <div class="tips-box">
+                            <h4>💡 When to Use Siege</h4>
+                            <p>Siege units are essential for destroying enemy cities and fortresses. Bring them when your goal is demolition, not troop combat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Upgrade Priority Guide</h2>
+                    <table class="priority-table">
+                        <thead>
+                            <tr>
+                                <th>Building</th>
+                                <th>Early Game</th>
+                                <th>Mid Game</th>
+                                <th>Late Game</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Barracks</td>
+                                <td class="priority-high">Priority 1</td>
+                                <td class="priority-high">Priority 1</td>
+                                <td class="priority-high">Max First</td>
+                            </tr>
+                            <tr>
+                                <td>Archery Range</td>
+                                <td class="priority-high">Priority 2</td>
+                                <td class="priority-high">Priority 2</td>
+                                <td class="priority-high">Max Second</td>
+                            </tr>
+                            <tr>
+                                <td>Stable</td>
+                                <td class="priority-medium">Priority 3</td>
+                                <td class="priority-high">Priority 3</td>
+                                <td class="priority-high">Max Third</td>
+                            </tr>
+                            <tr>
+                                <td>Workshop</td>
+                                <td class="priority-medium">Low</td>
+                                <td class="priority-medium">Priority 4</td>
+                                <td class="priority-medium">Max Last</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2>Troop Tier Progression</h2>
+                    <p>Understanding troop tiers helps you plan your building upgrades strategically.</p>
+                    <ul>
+                        <li><strong>T1 Troops:</strong> Basic units, unlocked at building level 1. Weak but cheap.</li>
+                        <li><strong>T2 Troops:</strong> Unlocked at level 5. Moderate improvement over T1.</li>
+                        <li><strong>T3 Troops:</strong> Unlocked at level 10. Significant power jump. Good for mid-game.</li>
+                        <li><strong>T4 Troops:</strong> Unlocked at level 15. Strong units for serious warfare.</li>
+                        <li><strong>T5 Troops:</strong> Unlocked at level 20+. Elite units, expensive but devastating.</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>💡 Tier Strategy</h4>
+                        <p>Don't rush to T5 if you can't afford it! T4 armies are more cost-effective for most players. Only upgrade to T5 when you have strong resource production.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="quick-info">
+                    <h3>Quick Reference</h3>
+                    <div class="info-item">
+                        <div class="info-label">Most Important</div>
+                        <div class="info-value">Barracks</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Best DPS</div>
+                        <div class="info-value">Archery Range</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Fastest Units</div>
+                        <div class="info-value">Stable (Cavalry)</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Siege Specialist</div>
+                        <div class="info-value">Workshop</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Training Tips</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Always keep training queues full</li>
+                        <li>Use speed-ups during training events</li>
+                        <li>Balance troop types for versatility</li>
+                        <li>Keep hospital capacity in mind</li>
+                        <li>Research military tech simultaneously</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Resource Requirements</h3>
+                    <p style="font-size: 0.9em; opacity: 0.8;">
+                        <strong>Barracks:</strong> Food + Wood<br><br>
+                        <strong>Stable:</strong> Food + Gold<br><br>
+                        <strong>Archery Range:</strong> Wood + Stone<br><br>
+                        <strong>Workshop:</strong> Stone + Gold
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

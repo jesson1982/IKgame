@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Buildings Guide - Infinity Kingdom</title>
+    <meta name="description" content="Complete guide to economic buildings in Infinity Kingdom. Learn about Farms, Lumber Mills, Quarries, Gold Mines and optimal upgrade priorities for resource production.">
+    <meta name="keywords" content="Infinity Kingdom, economic buildings, farm, lumber mill, quarry, gold mine, resource production, building guide">
+    <link rel="canonical" href="https://infinity-kingdom-guide.com/building-economic.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .guide-header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .guide-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .guide-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guide-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #ffd700;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            margin: 20px 0 15px 0;
+            color: #ffed4e;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .card ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .building-card {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .building-card h3 {
+            color: #ffd700;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .building-icon {
+            font-size: 2em;
+        }
+
+        .building-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .stat-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.8em;
+            opacity: 0.7;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .tips-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid rgba(76, 175, 80, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .tips-box h4 {
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: rgba(255, 193, 7, 0.2);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .warning-box h4 {
+            color: #ffc107;
+            margin-bottom: 10px;
+        }
+
+        .priority-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .priority-table th,
+        .priority-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .priority-table th {
+            background: rgba(255, 215, 0, 0.2);
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .priority-high {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .priority-medium {
+            color: #ffc107;
+        }
+
+        .quick-info {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .quick-info h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .back-button {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.3);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 215, 0, 0.5);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .guide-header {
+                padding: 20px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html#economic-buildings" class="back-button">← Back to Buildings</a>
+
+        <div class="guide-header">
+            <div class="guide-icon">💰</div>
+            <h1>Economic Buildings Guide</h1>
+            <p>Maximize your resource production with optimal economic building upgrades. Learn about Farms, Lumber Mills, Quarries, and Gold Mines.</p>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="card">
+                    <h2>Overview of Economic Buildings</h2>
+                    <p>Economic buildings generate the resources needed for all activities in Infinity Kingdom. Upgrading them increases production rates and storage capacity.</p>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🌾</span> Farm</h3>
+                        <p>Farms produce food continuously over time. Food is the most consumed resource for training troops and healing.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Produces</div>
+                                <div class="stat-value">Food</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">Highest</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Production Rate</div>
+                                <div class="stat-value">Increases with level</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Storage Bonus</div>
+                                <div class="stat-value">Yes</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Increase food production per hour</li>
+                            <li>Unlock higher level farms on world map</li>
+                            <li>Increase warehouse food storage capacity</li>
+                            <li>Reduce troop training food cost (with research)</li>
+                        </ul>
+
+                        <div class="tips-box">
+                            <h4>💡 Pro Tip</h4>
+                            <p>Food is always in demand! Keep your Farms at maximum level possible. You can never have too much food production.</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🪵</span> Lumber Mill</h3>
+                        <p>Lumber Mills produce wood continuously. Wood is essential for building upgrades and research.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Produces</div>
+                                <div class="stat-value">Wood</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">High</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Production Rate</div>
+                                <div class="stat-value">Increases with level</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Early Game</div>
+                                <div class="stat-value">Critical</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Increase wood production per hour</li>
+                            <li>Unlock higher level lumber tiles on map</li>
+                            <li>Increase warehouse wood storage capacity</li>
+                            <li>Reduce building upgrade wood cost (with tech)</li>
+                        </ul>
+
+                        <div class="tips-box">
+                            <h4>💡 Early Game Focus</h4>
+                            <p>Wood is heavily needed in early game for building upgrades. Prioritize Lumber Mill upgrades until mid-game.</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🪨</span> Quarry</h3>
+                        <p>Quarries produce stone continuously. Stone becomes critical in mid to late game for advanced buildings.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Produces</div>
+                                <div class="stat-value">Stone</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">Medium-High</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Production Rate</div>
+                                <div class="stat-value">Increases with level</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Mid Game</div>
+                                <div class="stat-value">Very Important</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Increase stone production per hour</li>
+                            <li>Unlock higher level quarries on map</li>
+                            <li>Increase warehouse stone storage capacity</li>
+                            <li>Required for high-level building upgrades</li>
+                        </ul>
+
+                        <div class="warning-box">
+                            <h4>⚠️ Note</h4>
+                            <p>Stone demand spikes in mid-game when upgrading walls and advanced buildings. Prepare by upgrading Quarries early!</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">💎</span> Gold Mine</h3>
+                        <p>Gold Mines produce gold slowly. Gold is the premium currency used for special purchases and speed-ups.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Produces</div>
+                                <div class="stat-value">Gold</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">Medium</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Production Rate</div>
+                                <div class="stat-value">Slow but steady</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Usage</div>
+                                <div class="stat-value">Premium Currency</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Increase gold production per hour</li>
+                            <li>Passive income without active gameplay</li>
+                            <li>Reduces dependency on purchases</li>
+                            <li>Unlocks special gold-only items in shop</li>
+                        </ul>
+
+                        <div class="tips-box">
+                            <h4>💡 Gold Management</h4>
+                            <p>Never spend gold on speed-ups! Save gold for permanent upgrades like builder slots and resource boosts.</p>
+                        </div>
+                    </div>
+
+                    <div class="building-card">
+                        <h3><span class="building-icon">🏦</span> Warehouse</h3>
+                        <p>Warehouses protect your resources from enemy raids. Higher levels protect more resources.</p>
+                        
+                        <div class="building-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Function</div>
+                                <div class="stat-value">Resource Protection</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Priority</div>
+                                <div class="stat-value">Very High</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Protection</div>
+                                <div class="stat-value">Percentage based</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Safety</div>
+                                <div class="stat-value">Below cap = Safe</div>
+                            </div>
+                        </div>
+
+                        <h4>Upgrade Benefits:</h4>
+                        <ul>
+                            <li>Increase protected resource amount</li>
+                            <li>Resources below cap cannot be stolen</li>
+                            <li>Critical for protecting offline progress</li>
+                            <li>Should match Town Hall level</li>
+                        </ul>
+
+                        <div class="warning-box">
+                            <h4>⚠️ Critical Building</h4>
+                            <p>A low-level Warehouse makes you a target! Always keep Warehouse upgraded to protect your hard-earned resources.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Upgrade Priority Guide</h2>
+                    <table class="priority-table">
+                        <thead>
+                            <tr>
+                                <th>Building</th>
+                                <th>Early Game</th>
+                                <th>Mid Game</th>
+                                <th>Late Game</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Warehouse</td>
+                                <td class="priority-high">Priority 1</td>
+                                <td class="priority-high">Priority 1</td>
+                                <td class="priority-high">Match TH Level</td>
+                            </tr>
+                            <tr>
+                                <td>Farm</td>
+                                <td class="priority-high">Priority 2</td>
+                                <td class="priority-high">Priority 1</td>
+                                <td class="priority-high">Max Always</td>
+                            </tr>
+                            <tr>
+                                <td>Lumber Mill</td>
+                                <td class="priority-high">Priority 3</td>
+                                <td class="priority-medium">Priority 3</td>
+                                <td class="priority-medium">High</td>
+                            </tr>
+                            <tr>
+                                <td>Quarry</td>
+                                <td class="priority-medium">Priority 4</td>
+                                <td class="priority-high">Priority 2</td>
+                                <td class="priority-high">High</td>
+                            </tr>
+                            <tr>
+                                <td>Gold Mine</td>
+                                <td class="priority-medium">Low</td>
+                                <td class="priority-medium">Priority 4</td>
+                                <td class="priority-medium">Medium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2>Resource Production Tips</h2>
+                    <ul>
+                        <li><strong>Balance Production:</strong> Don't neglect any resource type completely</li>
+                        <li><strong>World Map Gathering:</strong> Supplement building production with map gathering</li>
+                        <li><strong>Alliance Help:</strong> Request resources from alliance when short</li>
+                        <li><strong>Marketplace Trading:</strong> Convert surplus resources when needed</li>
+                        <li><strong>Event Bonuses:</strong> Maximize production during resource events</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>💡 Production Formula</h4>
+                        <p>Total Resource Income = Building Production + Map Gathering + Quest Rewards + Alliance Gifts. Diversify your income sources!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="quick-info">
+                    <h3>Quick Reference</h3>
+                    <div class="info-item">
+                        <div class="info-label">Most Important</div>
+                        <div class="info-value">Warehouse + Farm</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Early Game</div>
+                        <div class="info-value">Lumber Mill</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Mid Game</div>
+                        <div class="info-value">Quarry</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Premium Currency</div>
+                        <div class="info-value">Gold Mine</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Production Tips</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Keep all producers at TH level</li>
+                        <li>Use gathering heroes for bonuses</li>
+                        <li>Activate production boosters</li>
+                        <li>Join active alliance for help</li>
+                        <li>Protect resources with shields</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Resource Usage</h3>
+                    <p style="font-size: 0.9em; opacity: 0.8;">
+                        <strong>Food:</strong> Troops, Healing<br><br>
+                        <strong>Wood:</strong> Buildings, Research<br><br>
+                        <strong>Stone:</strong> Walls, Advanced Buildings<br><br>
+                        <strong>Gold:</strong> Premium Items, Speed-ups
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

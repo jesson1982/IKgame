@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KvK Warfare Guide - Infinity Kingdom</title>
+    <meta name="description" content="Master Kingdom vs Kingdom battles in Infinity Kingdom. Learn cross-server strategy, fortress capture, territory control, and advanced KvK tactics for domination.">
+    <meta name="keywords" content="Infinity Kingdom, KvK, kingdom vs kingdom, cross-server warfare, fortress capture, territory control, PvP guide">
+    <link rel="canonical" href="https://infinity-kingdom-guide.com/strategy-kvk.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c0466 0%, #6a0dad 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .guide-header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .guide-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .guide-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #9c27b0, #ba68c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guide-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #9c27b0;
+            border-bottom: 2px solid rgba(156, 39, 176, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            margin: 20px 0 15px 0;
+            color: #ba68c8;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .card ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: rgba(156, 39, 176, 0.1);
+            border: 2px solid rgba(156, 39, 176, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .section-card h3 {
+            color: #9c27b0;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-number {
+            background: #9c27b0;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .section-card p {
+            margin-bottom: 15px;
+        }
+
+        .section-card ul {
+            margin-left: 20px;
+        }
+
+        .section-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid rgba(76, 175, 80, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .tips-box h4 {
+            color: #4caf50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-box ul {
+            margin-left: 20px;
+        }
+
+        .tips-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: rgba(255, 193, 7, 0.2);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .warning-box h4 {
+            color: #ffc107;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Strategy Map */
+        .strategy-map {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(156, 39, 176, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .strategy-map h4 {
+            color: #9c27b0;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .map-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .map-cell {
+            aspect-ratio: 1;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+            text-align: center;
+            padding: 3px;
+        }
+
+        .cell-fortress {
+            background: rgba(255, 215, 0, 0.4);
+            border-color: #ffd700;
+            font-weight: bold;
+        }
+
+        .cell-territory {
+            background: rgba(156, 39, 176, 0.3);
+            border-color: #9c27b0;
+        }
+
+        .cell-resource {
+            background: rgba(76, 175, 80, 0.3);
+            border-color: #4caf50;
+        }
+
+        .cell-border {
+            background: rgba(244, 67, 54, 0.3);
+            border-color: #f44336;
+        }
+
+        .cell-center {
+            background: rgba(255, 215, 0, 0.5);
+            border-color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Power Comparison Table */
+        .power-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .power-table th,
+        .power-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .power-table th {
+            background: rgba(156, 39, 176, 0.2);
+            color: #9c27b0;
+            font-weight: bold;
+        }
+
+        .power-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Quick Info Sidebar */
+        .quick-info {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .quick-info h3 {
+            color: #9c27b0;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            background: rgba(156, 39, 176, 0.3);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(156, 39, 176, 0.5);
+        }
+
+        .back-button:hover {
+            background: rgba(156, 39, 176, 0.5);
+            transform: translateX(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-header h1 {
+                font-size: 2em;
+            }
+
+            .map-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .guide-header {
+                padding: 20px;
+            }
+
+            .guide-header h1 {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .map-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <a href="index.html#kvk-warfare" class="back-button">← Back to Strategies</a>
+
+        <!-- Guide Header -->
+        <div class="guide-header">
+            <div class="guide-icon">👑</div>
+            <h1>KvK Warfare Guide</h1>
+            <p>Dominate Kingdom vs Kingdom battles with advanced tactics. Learn cross-server strategy, fortress capture, territory control, and how to lead your kingdom to victory.</p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- KvK Basics -->
+                <div class="card">
+                    <h2>Understanding KvK Warfare</h2>
+                    <p>Kingdom vs Kingdom (KvK) is the ultimate test of coordination, strategy, and power in Infinity Kingdom. Success requires more than individual strength—it demands kingdom-wide cooperation.</p>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> What is KvK?</h3>
+                        <ul>
+                            <li><strong>Cross-Server Battles:</strong> Your kingdom fights against other kingdoms</li>
+                            <li><strong>Seasonal Events:</strong> KvK seasons run for specific periods</li>
+                            <li><strong>Territory Control:</strong> Capture and hold strategic locations</li>
+                            <li><strong>Fortress Battles:</strong> Major objectives provide kingdom-wide bonuses</li>
+                            <li><strong>Ranking System:</strong> Kingdoms earn rewards based on performance</li>
+                            <li><strong>Individual Rewards:</strong> Personal contributions earn exclusive items</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> KvK Phases</h3>
+                        <ul>
+                            <li><strong>Preparation Phase:</strong> Build up resources, train troops, coordinate strategies</li>
+                            <li><strong>Qualification Phase:</strong> Kingdoms compete to enter main KvK bracket</li>
+                            <li><strong>Group Stage:</strong> Multiple kingdoms battle in groups</li>
+                            <li><strong>Elimination Stage:</strong> Top kingdoms face off in knockout rounds</li>
+                            <li><strong>Finals:</strong> Championship battle for ultimate glory</li>
+                        </ul>
+                        <div class="tips-box">
+                            <h4>💡 Preparation is Key</h4>
+                            <ul>
+                                <li>Use preparation phase to stockpile resources and troops</li>
+                                <li>Coordinate with alliance on target priorities</li>
+                                <li>Ensure all members understand their roles</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Power Requirements</h3>
+                        <table class="power-table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Minimum Power</th>
+                                    <th>Responsibility</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Vanguard</td>
+                                    <td>Top 10%</td>
+                                    <td>Lead attacks, capture fortresses</td>
+                                </tr>
+                                <tr>
+                                    <td>Main Force</td>
+                                    <td>Top 10-30%</td>
+                                    <td>Support vanguard, defend positions</td>
+                                </tr>
+                                <tr>
+                                    <td>Support</td>
+                                    <td>Top 30-60%</td>
+                                    <td>Reinforce allies, gather resources</td>
+                                </tr>
+                                <tr>
+                                    <td>Reserve</td>
+                                    <td>All Players</td>
+                                    <td>Defend home kingdom, provide troops</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Fortress Capture -->
+                <div class="card">
+                    <h2>Fortress Capture Strategy</h2>
+                    <p>Fortresses are the most valuable objectives in KvK. Controlling them provides massive bonuses to your entire kingdom.</p>
+
+                    <div class="strategy-map">
+                        <h4>Typical KvK Map Layout</h4>
+                        <div class="map-grid">
+                            <div class="map-cell cell-border">Border</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-resource">Res</div>
+                            <div class="map-cell cell-fortress">FORT</div>
+                            <div class="map-cell cell-resource">Res</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-border">Border</div>
+                            
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-territory">Contested</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            
+                            <div class="map-cell cell-resource">Res</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-center">CENTER</div>
+                            <div class="map-cell cell-fortress">FORT</div>
+                            <div class="map-cell cell-center">CENTER</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-resource">Res</div>
+                            
+                            <div class="map-cell cell-fortress">FORT</div>
+                            <div class="map-cell cell-territory">Contested</div>
+                            <div class="map-cell cell-center">CENTER</div>
+                            <div class="map-cell cell-fortress">THRONE</div>
+                            <div class="map-cell cell-center">CENTER</div>
+                            <div class="map-cell cell-territory">Contested</div>
+                            <div class="map-cell cell-fortress">FORT</div>
+                            
+                            <div class="map-cell cell-resource">Res</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-center">CENTER</div>
+                            <div class="map-cell cell-fortress">FORT</div>
+                            <div class="map-cell cell-center">CENTER</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-resource">Res</div>
+                            
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-territory">Contested</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            
+                            <div class="map-cell cell-border">Border</div>
+                            <div class="map-cell cell-territory">Ally</div>
+                            <div class="map-cell cell-resource">Res</div>
+                            <div class="map-cell cell-fortress">FORT</div>
+                            <div class="map-cell cell-resource">Res</div>
+                            <div class="map-cell cell-territory">Enemy</div>
+                            <div class="map-cell cell-border">Border</div>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Fortress Types</h3>
+                        <ul>
+                            <li><strong>Border Fortresses:</strong> Entry points, easier to capture</li>
+                            <li><strong>Inner Fortresses:</strong> Strategic positions, moderate difficulty</li>
+                            <li><strong>Central Fortress:</strong> High value, heavily contested</li>
+                            <li><strong>Throne Room:</strong> Ultimate objective, requires kingdom coordination</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Capture Mechanics</h3>
+                        <ul>
+                            <li><strong>Rally Attacks:</strong> Multiple players must rally the fortress</li>
+                            <li><strong>Hold Time:</strong> Must maintain control for set duration</li>
+                            <li><strong>Defense:</strong> Enemy can counter-attack to reclaim</li>
+                            <li><strong>Garrison:</strong> Station troops to increase hold strength</li>
+                            <li><strong>Supply Lines:</strong> Connected territories provide bonuses</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Fortress Attack Strategy</h3>
+                        <ul>
+                            <li><strong>Scout First:</strong> Check enemy garrison strength</li>
+                            <li><strong>Coordinate Timing:</strong> Multiple rallies hit simultaneously</li>
+                            <li><strong>Overwhelming Force:</strong> Bring more power than defender</li>
+                            <li><strong>Follow-Up Defense:</strong> Immediately reinforce after capture</li>
+                            <li><strong>Supply Route:</strong> Maintain connection to friendly territory</li>
+                        </ul>
+                        <div class="warning-box">
+                            <h4>⚠️ Common Mistake</h4>
+                            <p>Capturing a fortress without securing supply lines makes it vulnerable to easy recapture. Always ensure connected territory before pushing deeper!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Territory Control -->
+                <div class="card">
+                    <h2>Territory Control & Supply Lines</h2>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Territory Basics</h3>
+                        <ul>
+                            <li><strong>Connected Tiles:</strong> Territories must connect to expand</li>
+                            <li><strong>Supply Lines:</strong> Broken connections weaken held positions</li>
+                            <li><strong>Choke Points:</strong> Narrow passages are critical to control</li>
+                            <li><strong>Resource Tiles:</strong> Provide ongoing benefits to holder</li>
+                            <li><strong>Vision:</strong> Controlled territory reveals enemy movements</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Expansion Strategy</h3>
+                        <ul>
+                            <li><strong>Secure Flanks:</strong> Protect sides before pushing forward</li>
+                            <li><strong>Gradual Advance:</strong> Don't overextend supply lines</li>
+                            <li><strong>Key Positions:</strong> Prioritize strategically important tiles</li>
+                            <li><strong>Defensive Perimeter:</strong> Establish defensible borders</li>
+                            <li><strong>Retreat Routes:</strong> Always have fallback positions planned</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Cutting Enemy Supply</h3>
+                        <ul>
+                            <li><strong>Identify Weak Points:</strong> Find thin connections in enemy territory</li>
+                            <li><strong>Flank Attacks:</strong> Hit supply lines from unexpected angles</li>
+                            <li><strong>Simultaneous Strikes:</strong> Cut multiple points at once</li>
+                            <li><strong>Hold the Cut:</strong> Maintain pressure on severed connections</li>
+                            <li><strong>Exploit Chaos:</strong> Push advantage when enemy is disrupted</li>
+                        </ul>
+                        <div class="tips-box">
+                            <h4>💡 Advanced Tactic</h4>
+                            <ul>
+                                <li>Cutting supply lines isolates enemy fortresses</li>
+                                <li>Isolated fortresses are much easier to recapture</li>
+                                <li>Coordinate with team to execute supply cuts effectively</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cross-Server Coordination -->
+                <div class="card">
+                    <h2>Cross-Server Strategy & Communication</h2>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Kingdom-Wide Coordination</h3>
+                        <ul>
+                            <li><strong>Leadership Structure:</strong> Clear chain of command essential</li>
+                            <li><strong>Communication Channels:</strong> Discord or similar for real-time coordination</li>
+                            <li><strong>Role Assignment:</strong> Each player knows their responsibilities</li>
+                            <li><strong>Target Calls:</strong> Leaders announce priority targets</li>
+                            <li><strong>Response Time:</strong> Quick reaction to changing situations</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Alliance Cooperation</h3>
+                        <ul>
+                            <li><strong>Cross-Alliance Teams:</strong> Work with other alliances in your kingdom</li>
+                            <li><strong>Resource Sharing:</strong> Help weaker kingdom members prepare</li>
+                            <li><strong>Joint Rallies:</strong> Coordinate multi-alliance attacks</li>
+                            <li><strong>Intel Sharing:</strong> Share scout reports and enemy info</li>
+                            <li><strong>Unified Strategy:</strong> All alliances follow same game plan</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Battle Timeline Management</h3>
+                        <ul>
+                            <li><strong>Schedule Conflicts:</strong> Plan around peak activity times</li>
+                            <li><strong>Time Zones:</strong> Consider international player base</li>
+                            <li><strong>Shift System:</strong> Rotate active defense/offense shifts</li>
+                            <li><strong>Emergency Protocol:</strong> Quick response plan for surprise attacks</li>
+                            <li><strong>Rest Periods:</strong> Ensure players get adequate rest</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Advanced Tactics -->
+                <div class="card">
+                    <h2>Advanced KvK Tactics</h2>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Bait & Switch</h3>
+                        <ul>
+                            <li><strong>Weak Target:</strong> Appear vulnerable at one location</li>
+                            <li><strong>Trap Setup:</strong> Hide strong forces nearby</li>
+                            <li><strong>Ambush:</strong> Counter-attack when enemy commits</li>
+                            <li><strong>Quick Strike:</strong> Hit exposed enemy positions while they're distracted</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Multi-Front Pressure</h3>
+                        <ul>
+                            <li><strong>Simultaneous Attacks:</strong> Strike multiple locations at once</li>
+                            <li><strong>Stretch Defenses:</strong> Force enemy to split their forces</li>
+                            <li><strong>Exploit Weakness:</strong> Punch through weakest defended area</li>
+                            <li><strong>Maintain Pressure:</strong> Keep enemy reacting, not acting</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Economic Warfare</h3>
+                        <ul>
+                            <li><strong>Resource Denial:</strong> Capture enemy resource tiles</li>
+                            <li><strong>Gathering Disruption:</strong> Kill enemy gathering armies</li>
+                            <li><strong>Trade Blockade:</strong> Control key trade routes</li>
+                            <li><strong>War of Attrition:</strong> Drain enemy resources through constant pressure</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">4</span> Endgame Strategy</h3>
+                        <ul>
+                            <li><strong>Throne Push:</strong> Final assault on throne room</li>
+                            <li><strong>All-In Timing:</strong> Coordinate kingdom-wide final push</li>
+                            <li><strong>Reserve Deployment:</strong> Commit remaining forces</li>
+                            <li><strong>Victory Conditions:</strong> Hold throne until timer expires</li>
+                            <li><strong>Defensive Setup:</strong> Prepare for desperate enemy counter-attacks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Quick Info -->
+                <div class="card quick-info">
+                    <h3>KvK Essentials</h3>
+                    <div class="info-item">
+                        <div class="info-label">Team Size</div>
+                        <div class="info-value">Full Kingdom</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Duration</div>
+                        <div class="info-value">Several Weeks</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Key Objective</div>
+                        <div class="info-value">Capture Throne</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Success Factor</div>
+                        <div class="info-value">Coordination</div>
+                    </div>
+                </div>
+
+                <!-- KvK Roles -->
+                <div class="card">
+                    <h3>Player Roles</h3>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Whales:</strong> Lead rallies, tank damage</li>
+                        <li><strong>Dolphins:</strong> Support attacks, defend</li>
+                        <li><strong>F2P:</strong> Reinforce, gather, assist</li>
+                        <li><strong>Officers:</strong> Coordinate, strategize</li>
+                        <li><strong>Scouts:</strong> Gather intel, report</li>
+                    </ul>
+                </div>
+
+                <!-- Important Targets -->
+                <div class="card">
+                    <h3>Target Priority</h3>
+                    <ol style="margin-left: 20px;">
+                        <li>Throne Room (Ultimate)</li>
+                        <li>Central Fortress</li>
+                        <li>Border Fortresses</li>
+                        <li>Resource Clusters</li>
+                        <li>Supply Line Nodes</li>
+                        <li>Enemy Rally Points</li>
+                    </ol>
+                </div>
+
+                <!-- Communication -->
+                <div class="card">
+                    <h3>Communication Tips</h3>
+                    <p style="font-size: 0.9em; opacity: 0.8;">
+                        <strong>Use Clear Callouts:</strong><br>
+                        • "Rally on Fortress A"<br>
+                        • "Defend coordinates X,Y"<br>
+                        • "Enemy pushing north"<br>
+                        • "Need reinforcements now"<br><br>
+                        
+                        <strong>Stay Calm:</strong><br>
+                        • Panic spreads quickly<br>
+                        • Follow leader instructions<br>
+                        • Report intel clearly
+                    </p>
+                </div>
+
+                <!-- Common Mistakes -->
+                <div class="card">
+                    <h3>Avoid These Mistakes</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Acting without coordination</li>
+                        <li>Overextending supply lines</li>
+                        <li>Ignoring communication channels</li>
+                        <li>Wasting troops on lost causes</li>
+                        <li>Not preparing during prep phase</li>
+                        <li>Fighting alone instead of rallying</li>
+                        <li>Forgetting to reinforce captures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

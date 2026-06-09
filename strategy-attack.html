@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack Formation Guide - Infinity Kingdom</title>
+    <meta name="description" content="Master attack strategies in Infinity Kingdom. Learn troop synergy, target selection, rally coordination, and battle timing to maximize your offensive power.">
+    <meta name="keywords" content="Infinity Kingdom, attack strategy, offense formation, rally, battle tactics, army composition, attack guide">
+    <link rel="canonical" href="https://infinity-kingdom-guide.com/strategy-attack.html">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #c31432 0%, #240b36 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .guide-header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .guide-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .guide-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .guide-header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .card h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #ff6b6b;
+            border-bottom: 2px solid rgba(255, 107, 107, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            margin: 20px 0 15px 0;
+            color: #ff8e8e;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        .card ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: rgba(255, 107, 107, 0.1);
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .section-card h3 {
+            color: #ff6b6b;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-number {
+            background: #ff6b6b;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .section-card p {
+            margin-bottom: 15px;
+        }
+
+        .section-card ul {
+            margin-left: 20px;
+        }
+
+        .section-card li {
+            margin-bottom: 8px;
+        }
+
+        /* Tips Box */
+        .tips-box {
+            background: rgba(76, 175, 80, 0.2);
+            border: 2px solid rgba(76, 175, 80, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .tips-box h4 {
+            color: #4caf50;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-box ul {
+            margin-left: 20px;
+        }
+
+        .tips-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: rgba(255, 193, 7, 0.2);
+            border: 2px solid rgba(255, 193, 7, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        .warning-box h4 {
+            color: #ffc107;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Troop Type Comparison */
+        .troop-comparison {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .troop-type {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .troop-type h4 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        .troop-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .troop-stats {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .troop-stats div {
+            margin-bottom: 5px;
+        }
+
+        /* Attack Priority Table */
+        .priority-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .priority-table th,
+        .priority-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .priority-table th {
+            background: rgba(255, 107, 107, 0.2);
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .priority-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .priority-high {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .priority-medium {
+            color: #ffc107;
+        }
+
+        .priority-low {
+            color: #4caf50;
+        }
+
+        /* Quick Info Sidebar */
+        .quick-info {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .quick-info h3 {
+            color: #ff6b6b;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.9em;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+
+        .info-value {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            background: rgba(255, 107, 107, 0.3);
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 107, 107, 0.5);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 107, 107, 0.5);
+            transform: translateX(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-header h1 {
+                font-size: 2em;
+            }
+
+            .troop-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .guide-header {
+                padding: 20px;
+            }
+
+            .guide-header h1 {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Back Button -->
+        <a href="index.html#attack-formation" class="back-button">← Back to Strategies</a>
+
+        <!-- Guide Header -->
+        <div class="guide-header">
+            <div class="guide-icon">⚔️</div>
+            <h1>Attack Formation Guide</h1>
+            <p>Maximize your offensive power with proven attack strategies. Learn troop synergy, target selection, rally coordination, and advanced battle tactics.</p>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Troop Synergy -->
+                <div class="card">
+                    <h2>Troop Synergy & Composition</h2>
+                    <p>Understanding how different troop types work together is essential for successful attacks. The right composition can mean the difference between victory and defeat.</p>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Troop Type Overview</h3>
+                        <div class="troop-comparison">
+                            <div class="troop-type">
+                                <div class="troop-icon">🛡️</div>
+                                <h4>Infantry</h4>
+                                <div class="troop-stats">
+                                    <div><strong>ATK:</strong> Medium</div>
+                                    <div><strong>DEF:</strong> High</div>
+                                    <div><strong>HP:</strong> High</div>
+                                    <div><strong>Speed:</strong> Slow</div>
+                                </div>
+                            </div>
+                            <div class="troop-type">
+                                <div class="troop-icon">🐴</div>
+                                <h4>Cavalry</h4>
+                                <div class="troop-stats">
+                                    <div><strong>ATK:</strong> High</div>
+                                    <div><strong>DEF:</strong> Low</div>
+                                    <div><strong>HP:</strong> Medium</div>
+                                    <div><strong>Speed:</strong> Fast</div>
+                                </div>
+                            </div>
+                            <div class="troop-type">
+                                <div class="troop-icon">🏹</div>
+                                <h4>Rangers</h4>
+                                <div class="troop-stats">
+                                    <div><strong>ATK:</strong> Very High</div>
+                                    <div><strong>DEF:</strong> Very Low</div>
+                                    <div><strong>HP:</strong> Low</div>
+                                    <div><strong>Speed:</strong> Medium</div>
+                                </div>
+                            </div>
+                        </div>
+                        <p><strong>Rock-Paper-Scissors System:</strong></p>
+                        <ul>
+                            <li><strong>Infantry beats Rangers:</strong> Infantry tanks ranger damage effectively</li>
+                            <li><strong>Rangers beat Cavalry:</strong> Rangers outrange and destroy cavalry</li>
+                            <li><strong>Cavalry beats Infantry:</strong> Cavalry flanks and overwhelms infantry</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Recommended Attack Compositions</h3>
+                        
+                        <h4>Balanced Attack Army</h4>
+                        <ul>
+                            <li><strong>40% Infantry:</strong> Frontline to absorb initial damage</li>
+                            <li><strong>35% Rangers:</strong> Main damage dealers from behind</li>
+                            <li><strong>25% Cavalry:</strong> Flanking force and cleanup crew</li>
+                        </ul>
+                        <p><em>Best for: General purpose attacks against unknown defenses</em></p>
+
+                        <h4>Aggressive DPS Army</h4>
+                        <ul>
+                            <li><strong>20% Infantry:</strong> Minimal tanking</li>
+                            <li><strong>50% Rangers:</strong> Maximum ranged damage</li>
+                            <li><strong>30% Cavalry:</strong> Heavy flanking pressure</li>
+                        </ul>
+                        <p><em>Best for: Attacking weaker targets you expect to win quickly</em></p>
+
+                        <h4>Siege Army</h4>
+                        <ul>
+                            <li><strong>50% Infantry:</strong> Heavy frontline for prolonged engagement</li>
+                            <li><strong>30% Rangers:</strong> Sustained damage output</li>
+                            <li><strong>20% Siege:</strong> Building destruction specialists</li>
+                        </ul>
+                        <p><em>Best for: Destroying enemy buildings and infrastructure</em></p>
+
+                        <div class="tips-box">
+                            <h4>💡 Composition Tip</h4>
+                            <ul>
+                                <li>Always scout your target first to adjust composition accordingly</li>
+                                <li>Match your troop type to counter the defender's main troop type</li>
+                                <li>Higher tier troops dramatically outperform lower tiers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Hero Selection for Attacks</h3>
+                        <p>Choose heroes that complement your army composition:</p>
+                        <ul>
+                            <li><strong>Leonidas:</strong> Excellent for warrior/ranger compositions</li>
+                            <li><strong>Artemis:</strong> Best for ranger-heavy armies</li>
+                            <li><strong>Caesar:</strong> Great for balanced attack forces</li>
+                            <li><strong>Alexander:</strong> Good for sustained siege attacks</li>
+                            <li><strong>Gareth:</strong> Solid F2P option for early game attacks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Target Selection -->
+                <div class="card">
+                    <h2>Target Selection Strategy</h2>
+                    <p>Choosing the right targets is as important as having a strong army. Smart targeting maximizes rewards while minimizing losses.</p>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Target Priority Table</h3>
+                        <table class="priority-table">
+                            <thead>
+                                <tr>
+                                    <th>Target Type</th>
+                                    <th>Priority</th>
+                                    <th>Risk Level</th>
+                                    <th>Reward</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Inactive Players (3+ days)</td>
+                                    <td class="priority-high">High</td>
+                                    <td>Low</td>
+                                    <td>Resources + Kill Points</td>
+                                </tr>
+                                <tr>
+                                    <td>Weaker Players (lower power)</td>
+                                    <td class="priority-high">High</td>
+                                    <td>Low-Medium</td>
+                                    <td>Resources + Territory</td>
+                                </tr>
+                                <tr>
+                                    <td>Resource Tiles</td>
+                                    <td class="priority-high">High</td>
+                                    <td>Very Low</td>
+                                    <td>Resources Only</td>
+                                </tr>
+                                <tr>
+                                    <td>Equal Power Players</td>
+                                    <td class="priority-medium">Medium</td>
+                                    <td>Medium-High</td>
+                                    <td>Variable</td>
+                                </tr>
+                                <tr>
+                                    <td>Barbarian Fortresses</td>
+                                    <td class="priority-medium">Medium</td>
+                                    <td>Medium</td>
+                                    <td>Equipment + EXP</td>
+                                </tr>
+                                <tr>
+                                    <td>Stronger Players</td>
+                                    <td class="priority-low">Low</td>
+                                    <td>Very High</td>
+                                    <td>High Risk, High Reward</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Scouting Before Attack</h3>
+                        <p>Never attack without proper reconnaissance!</p>
+                        <ul>
+                            <li><strong>Send Scouts:</strong> Always scout to see defender's troops</li>
+                            <li><strong>Check Power:</strong> Compare your power to target's power</li>
+                            <li><strong>Wall Level:</strong> Higher walls mean longer battle time</li>
+                            <li><strong>Garrison Heroes:</strong> Note which heroes are defending</li>
+                            <li><strong>Alliance Status:</strong> Check if target has active alliance</li>
+                            <li><strong>Shield Status:</strong> Verify target doesn't have active shield</li>
+                        </ul>
+                        <div class="warning-box">
+                            <h4>⚠️ Important</h4>
+                            <p>Attacking without scouting is gambling! You might walk into a trap or face unexpectedly strong defenses. Always scout first.</p>
+                        </div>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> When NOT to Attack</h3>
+                        <ul>
+                            <li>Your army is still recovering from previous battles</li>
+                            <li>Target has significantly higher power (2x or more)</li>
+                            <li>Target is in a strong alliance that will retaliate</li>
+                            <li>You're low on resources to train replacement troops</li>
+                            <li>Your best heroes are injured or tired</li>
+                            <li>You have an active shield (attacking removes it)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rally Coordination -->
+                <div class="card">
+                    <h2>Rally Coordination</h2>
+                    <p>Rallies allow multiple players to combine forces for devastating attacks. Proper coordination is key to successful rallies.</p>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Starting a Rally</h3>
+                        <ul>
+                            <li><strong>Select Target:</strong> Choose a high-value target worth the effort</li>
+                            <li><strong>Set Rally Size:</strong> Larger rallies attract more participants</li>
+                            <li><strong>Timing:</strong> Start rallies when alliance members are online</li>
+                            <li><strong>Communication:</strong> Announce rally in alliance chat</li>
+                            <li><strong>Hero Assignment:</strong> Use your best attack hero as rally leader</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> Joining Rallies</h3>
+                        <ul>
+                            <li><strong>Quick Response:</strong> Join rallies quickly before they fill up</li>
+                            <li><strong>Appropriate Troops:</strong> Send troops matching the rally's needs</li>
+                            <li><strong>Hero Support:</strong> Use supportive heroes even if not leading</li>
+                            <li><strong>Don't Overcommit:</strong> Keep some troops for personal defense</li>
+                            <li><strong>Watch Timer:</strong> Rally departure time is fixed - be ready</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Rally Best Practices</h3>
+                        <ul>
+                            <li><strong>Coordinate Timing:</strong> Ensure key members are available</li>
+                            <li><strong>Mix Troop Types:</strong> Different participants bring variety</li>
+                            <li><strong>Target Selection:</strong> Focus on strategic objectives</li>
+                            <li><strong>Post-Attack Plan:</strong> Have follow-up actions ready</li>
+                            <li><strong>Share Rewards:</strong> Distribute loot fairly among participants</li>
+                        </ul>
+                        <div class="tips-box">
+                            <h4>💡 Rally Tip</h4>
+                            <ul>
+                                <li>The rally leader's hero skills affect the entire rally force</li>
+                                <li>Choose rally leaders with strong attack buffs</li>
+                                <li>Larger rallies deal exponentially more damage than solo attacks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Battle Timing -->
+                <div class="card">
+                    <h2>Battle Timing & March Speed</h2>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">1</span> Optimal Attack Times</h3>
+                        <ul>
+                            <li><strong>Enemy Offline:</strong> Attack when defenders can't respond</li>
+                            <li><strong>Time Zone Advantage:</strong> Attack during enemy's nighttime</li>
+                            <li><strong>After Their Battles:</strong> Strike when their army is weakened</li>
+                            <li><strong>During Events:</strong> Some events provide attack bonuses</li>
+                            <li><strong>Coordinated Strikes:</strong> Multiple attacks overwhelm defenses</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">2</span> March Speed Optimization</h3>
+                        <ul>
+                            <li><strong>Research Speed Tech:</strong> Priority research for faster marches</li>
+                            <li><strong>Hero Skills:</strong> Some heroes increase march speed</li>
+                            <li><strong>Items:</strong> Use speed-up items for critical attacks</li>
+                            <li><strong>Distance Matters:</strong> Closer targets arrive faster</li>
+                            <li><strong>Terrain Effects:</strong> Some terrain slows movement</li>
+                        </ul>
+                    </div>
+
+                    <div class="section-card">
+                        <h3><span class="section-number">3</span> Multi-Wave Attacks</h3>
+                        <p>For serious assaults, coordinate multiple attack waves:</p>
+                        <ul>
+                            <li><strong>Wave 1:</strong> Weakening attack to drain defender's troops</li>
+                            <li><strong>Wave 2:</strong> Follow-up attack while defender is recovering</li>
+                            <li><strong>Wave 3:</strong> Final assault to achieve objectives</li>
+                            <li><strong>Timing:</strong> Space waves to prevent full recovery</li>
+                            <li><strong>Coordination:</strong> Requires alliance-wide communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Quick Info -->
+                <div class="card quick-info">
+                    <h3>Attack Checklist</h3>
+                    <div class="info-item">
+                        <div class="info-label">Before Attacking</div>
+                        <div class="info-value">Scout Target</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Army Status</div>
+                        <div class="info-value">Full Health</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Heroes</div>
+                        <div class="info-value">Ready & Equipped</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Backup Plan</div>
+                        <div class="info-value">Reinforcements Ready</div>
+                    </div>
+                </div>
+
+                <!-- Best Attack Heroes -->
+                <div class="card">
+                    <h3>Top Attack Heroes</h3>
+                    <ol style="margin-left: 20px;">
+                        <li>Leonidas (Epic)</li>
+                        <li>Artemis (Epic)</li>
+                        <li>Caesar (Legendary)</li>
+                        <li>Alexander (Legendary)</li>
+                        <li>Gareth (Rare)</li>
+                    </ol>
+                </div>
+
+                <!-- Attack Buffs -->
+                <div class="card">
+                    <h3>Attack Buff Sources</h3>
+                    <p style="font-size: 0.9em; opacity: 0.8;">
+                        <strong>Hero Skills:</strong> Active and passive attack bonuses<br><br>
+                        <strong>Research:</strong> Military tech increases ATK<br><br>
+                        <strong>Equipment:</strong> Weapons and accessories<br><br>
+                        <strong>Alliance:</strong> Territory and buff towers<br><br>
+                        <strong>Items:</strong> Temporary attack boosters
+                    </p>
+                </div>
+
+                <!-- Common Mistakes -->
+                <div class="card">
+                    <h3>Attack Mistakes to Avoid</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Attacking without scouting</li>
+                        <li>Ignoring troop type counters</li>
+                        <li>Overextending army</li>
+                        <li>Forgetting to heal troops</li>
+                        <li>Attacking shielded players</li>
+                        <li>Poor rally timing</li>
+                        <li>Wasting troops on low-value targets</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
