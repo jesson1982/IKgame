@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="garethBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498DB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ECC71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="url(#garethBg)" stroke="#FFF" stroke-width="4"/>
+  
+  <!-- Sword Symbol -->
+  <line x1="100" y1="70" x2="100" y2="140" stroke="#000" stroke-width="4" opacity="0.6"/>
+  <line x1="85" y1="90" x2="115" y2="90" stroke="#000" stroke-width="4" opacity="0.6"/>
+  <polygon points="100,65 96,75 104,75" fill="#000" opacity="0.6"/>
+  
+  <!-- Letter G -->
+  <text x="100" y="120" font-family="Arial Black, sans-serif" font-size="55" 
+        font-weight="bold" fill="#FFF" text-anchor="middle" dominant-baseline="middle">G</text>
+  
+  <!-- Rare Border Effect -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FFF" stroke-width="2" 
+          stroke-dasharray="6,3" opacity="0.5"/>
+</svg>

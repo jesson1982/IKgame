@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="alexanderBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="url(#alexanderBg)" stroke="#FFF" stroke-width="4"/>
+  
+  <!-- Crown Icon -->
+  <path d="M60 85 L80 60 L100 85 L120 60 L140 85 L140 110 L60 110 Z" 
+        fill="#000" opacity="0.8"/>
+  <circle cx="80" cy="60" r="5" fill="#000"/>
+  <circle cx="120" cy="60" r="5" fill="#000"/>
+  
+  <!-- Shield Symbol -->
+  <path d="M85 120 L115 120 L115 145 C115 155 100 165 100 165 C100 165 85 155 85 145 Z" 
+        fill="#000" opacity="0.6"/>
+  
+  <!-- Letter A -->
+  <text x="100" y="105" font-family="Arial Black, sans-serif" font-size="60" 
+        font-weight="bold" fill="#000" text-anchor="middle" dominant-baseline="middle">A</text>
+  
+  <!-- Legendary Border Effect -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FFF" stroke-width="2" 
+          stroke-dasharray="10,5" opacity="0.5"/>
+</svg>

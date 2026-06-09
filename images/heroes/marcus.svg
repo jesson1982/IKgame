@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="marcusBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498DB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980B9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="url(#marcusBg)" stroke="#FFF" stroke-width="4"/>
+  
+  <!-- Shield Symbol -->
+  <path d="M75 75 L125 75 L125 125 C125 145 100 160 100 160 C100 160 75 145 75 125 Z" 
+        fill="#000" opacity="0.5"/>
+  <path d="M80 80 L120 80 L120 120 C120 140 100 152 100 152 C100 152 80 140 80 120 Z" 
+        fill="none" stroke="#FFF" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Cross on Shield -->
+  <line x1="100" y1="90" x2="100" y2="140" stroke="#FFF" stroke-width="3" opacity="0.7"/>
+  <line x1="85" y1="110" x2="115" y2="110" stroke="#FFF" stroke-width="3" opacity="0.7"/>
+  
+  <!-- Letter M -->
+  <text x="100" y="115" font-family="Arial Black, sans-serif" font-size="55" 
+        font-weight="bold" fill="#FFF" text-anchor="middle" dominant-baseline="middle">M</text>
+  
+  <!-- Rare Border Effect -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FFF" stroke-width="2" 
+          stroke-dasharray="6,3" opacity="0.5"/>
+</svg>

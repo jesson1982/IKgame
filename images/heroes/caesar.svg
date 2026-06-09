@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="caesarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DC143C;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="url(#caesarBg)" stroke="#FFF" stroke-width="4"/>
+  
+  <!-- Roman Laurel Wreath -->
+  <ellipse cx="85" cy="75" rx="15" ry="8" fill="#228B22" opacity="0.8"/>
+  <ellipse cx="115" cy="75" rx="15" ry="8" fill="#228B22" opacity="0.8"/>
+  <ellipse cx="100" cy="65" rx="12" ry="6" fill="#228B22" opacity="0.8"/>
+  
+  <!-- Sword Symbol -->
+  <line x1="100" y1="90" x2="100" y2="150" stroke="#000" stroke-width="4" opacity="0.6"/>
+  <line x1="85" y1="100" x2="115" y2="100" stroke="#000" stroke-width="4" opacity="0.6"/>
+  
+  <!-- Letter J -->
+  <text x="100" y="130" font-family="Arial Black, sans-serif" font-size="60" 
+        font-weight="bold" fill="#000" text-anchor="middle" dominant-baseline="middle">J</text>
+  
+  <!-- Legendary Border Effect -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FFF" stroke-width="2" 
+          stroke-dasharray="10,5" opacity="0.5"/>
+</svg>
