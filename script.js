@@ -228,16 +228,16 @@ viewDetailsButtons.forEach(button => {
     });
 });
 
-// ===== Read More Links =====
-const readMoreLinks = document.querySelectorAll('.read-more');
+// ===== Read More Links - REMOVED: Subpages are now complete =====
+// const readMoreLinks = document.querySelectorAll('.read-more');
 
-readMoreLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const strategyTitle = e.target.closest('.strategy-card').querySelector('h3').textContent;
-        alert(`Full guide for "${strategyTitle}" is being prepared!\n\nCheck back soon for detailed strategies and tips.`);
-    });
-});
+// readMoreLinks.forEach(link => {
+//     link.addEventListener('click', (e) => {
+//         e.preventDefault();
+//         const strategyTitle = e.target.closest('.strategy-card').querySelector('h3').textContent;
+//         alert(`Full guide for "${strategyTitle}" is being prepared!\n\nCheck back soon for detailed strategies and tips.`);
+//     });
+// });
 
 // ===== Smooth Scroll for All Anchor Links =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
